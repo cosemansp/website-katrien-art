@@ -801,6 +801,8 @@ export type GetArtworkQuery = { __typename?: 'Query' } & {
         | 'handle'
         | 'mimeType'
         | 'title'
+        | 'height'
+        | 'width'
         | 'category'
         | 'description'
         | 'year'
@@ -828,6 +830,8 @@ export const GetArtworkDocument = gql`
       handle
       mimeType
       title
+      height
+      width
       category
       description
       year

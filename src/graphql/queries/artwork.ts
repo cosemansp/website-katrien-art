@@ -8,6 +8,8 @@ export default gql`
       handle
       mimeType
       title
+      height
+      width
       category
       description
       year
