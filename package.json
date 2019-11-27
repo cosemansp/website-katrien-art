@@ -9,7 +9,8 @@
     "eject": "react-scripts eject",
     "clean": "rimraf dist",
     "lint": "eslint \"src/**/*.{js,ts}\"",
-    "lint:types": "tsc --noEmit --pretty"
+    "lint:types": "tsc --noEmit --pretty",
+    "gql:gen": "graphql-codegen"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -36,6 +37,14 @@
     "typescript": "3.7.2"
   },
   "devDependencies": {
+    "@graphql-codegen/add": "^1.9.0",
+    "@graphql-codegen/cli": "1.8.0",
+    "@graphql-codegen/fragment-matcher": "^1.9.0",
+    "@graphql-codegen/introspection": "^1.8.3",
+    "@graphql-codegen/schema-ast": "^1.9.0",
+    "@graphql-codegen/typescript": "^1.8.3",
+    "@graphql-codegen/typescript-operations": "^1.9.0",
+    "@graphql-codegen/typescript-react-apollo": "^1.9.0",
     "@types/react-router-dom": "^5.1.3",
     "@typescript-eslint/parser": "^2.9.0",
     "@yeutech-lab/react-app-rewire-define-plugin": "^1.0.0",

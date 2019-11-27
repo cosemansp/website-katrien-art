@@ -1,18 +1,25 @@
-import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from 'react-router-dom';
+import React, { Fragment } from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { useGetArtworkQuery, Category } from './graphql/types';
 
 const Home = () => {
-  return <h2>Home</h2>;
-}
+  const { data } = useGetArtworkQuery({
+    variables: {
+      where: { AND: [{ category: Category.Painting }] },
+      orderBy: null,
+    },
+  });
+  console.log(data);
+  return (
+    <Fragment>
+      <h2>Home</h2>
+    </Fragment>
+  );
+};
 
 const About = () => {
   return <h2>About</h2>;
-}
+};
 
 const App: React.FC = () => {
   return (
@@ -39,6 +46,6 @@ const App: React.FC = () => {
       </div>
     </Router>
   );
-}
+};
 
 export default App;
