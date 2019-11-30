@@ -26,9 +26,16 @@ const Home = () => {
     setViewerIsOpen(false);
   };
 
+  interface Photo {
+    src: string;
+    width: number;
+    height: number;
+    title: string;
+  }
+
   console.log(data);
   if (!data || !data.assets) return <div>No data</div>;
-  const photos: any = data.assets
+  const photos = data.assets
     .map(asset => {
       if (asset) {
         return {
@@ -40,7 +47,7 @@ const Home = () => {
       }
       return null;
     })
-    .filter(Boolean);
+    .filter(Boolean) as Photo[];
   return (
     <Fragment>
       <h2>Home</h2>
