@@ -1,16 +1,16 @@
 <template>
   <div class="root">
     <Header />
-      <div class="main-container" :class="{'with-padding': withPadding}" >
-        <slot />
-      </div>
-    <footer />
+    <div class="main-container" :class="{ 'with-padding': withPadding }">
+      <slot />
+    </div>
+    <Footer />
   </div>
 </template>
 
 <script>
-import Header from './header';
-import Footer from './footer';
+import Header from './header'
+import Footer from './footer'
 
 export default {
   components: {
@@ -21,7 +21,7 @@ export default {
     withPadding: {
       type: Boolean,
       default: true
-    },
-  },
-};
+    }
+  }
+}
 </script>

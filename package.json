@@ -8,17 +8,20 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@nuxtjs/apollo": "^4.0.0-rc18",
+    "apollo-cache-inmemory": "^1.6.3",
+    "apollo-link-http": "^1.5.16",
     "nuxt": "latest"
   },
   "devDependencies": {
-    "nodemon": "^1.18.9",
     "@nuxtjs/eslint-config": "^1.0.1",
     "@nuxtjs/eslint-module": "^1.0.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^6.1.0",
-    "eslint-plugin-nuxt": ">=0.4.2",
     "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-nuxt": ">=0.4.2",
     "eslint-plugin-prettier": "^3.0.1",
+    "nodemon": "^1.18.9",
     "prettier": "^1.16.4"
   }
 }

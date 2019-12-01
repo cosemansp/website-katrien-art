@@ -1171,7 +1171,7 @@ $(document).ready(function() {
 			    mainClass: 'mfp-fade',
 					preloader: true,
 					image: {
-            titleSrc: 'title' 
+            titleSrc: 'data-title' 
             // this tells the script which attribute has your caption
         	},
 			    gallery: {
@@ -1220,7 +1220,11 @@ $(document).ready(function() {
 			    type: 'image',
 			    closeOnContentClick: true,
 			    mainClass: 'mfp-fade',
-			    preloader: true,
+          preloader: true,
+          image: {
+            titleSrc: 'data-title' 
+            // this tells the script which attribute has your caption
+        	},
 
 			    gallery: {
 				    enabled: true,
@@ -1450,7 +1454,11 @@ $(document).ready(function() {
 			    type: 'image',
 			    closeOnContentClick: true,
 			    mainClass: 'mfp-fade',
-			    preloader: true,
+          preloader: true,
+          image: {
+            titleSrc: 'data-title' 
+            // this tells the script which attribute has your caption
+        	},
 
 			    gallery: {
 				    enabled: true,
@@ -1500,34 +1508,43 @@ $(document).ready(function() {
 			    type: 'image',
 			    closeOnContentClick: true,
 			    mainClass: 'mfp-fade',
-			    preloader: true,
+          preloader: true,
+          image: {
+            titleSrc: 'data-title' 
+            // this tells the script which attribute has your caption
+        	},
 
 			    gallery: {
 				    enabled: true,
-					navigateByImgClick: true,
-					arrowMarkup: '<button title="%title%" type="button" class="arrow-%dir%"></button>', // markup of an arrow button
-					tPrev: 'Previous (Left arrow key)', // title for left button
-					tNext: 'Next (Right arrow key)', // title for right button
-					tCounter: '<span class="mfp-counter">%curr% of %total%</span>' // markup of counter
-				}
-			});
+            navigateByImgClick: true,
+            arrowMarkup: '<button title="%title%" type="button" class="arrow-%dir%"></button>', // markup of an arrow button
+            tPrev: 'Previous (Left arrow key)', // title for left button
+            tNext: 'Next (Right arrow key)', // title for right button
+            tCounter: '<span class="mfp-counter">%curr% of %total%</span>' // markup of counter
+          }
+        }
+      );
 
 			$(".gallery-images.style-title .img .overlay a:not('.video')").magnificPopup({
 			 
 			    type: 'image',
 			    closeOnContentClick: true,
 			    mainClass: 'mfp-fade',
-			    preloader: true,
-
+          preloader: true,
+          image: {
+            titleSrc: 'data-title' 
+            // this tells the script which attribute has your caption
+        	},
 			    gallery: {
 				    enabled: true,
-					navigateByImgClick: true,
-					arrowMarkup: '<button title="%title%" type="button" class="arrow-%dir%"></button>', // markup of an arrow button
-					tPrev: 'Previous (Left arrow key)', // title for left button
-					tNext: 'Next (Right arrow key)', // title for right button
-					tCounter: '<span class="mfp-counter">%curr% of %total%</span>' // markup of counter
-				}
-			});
+            navigateByImgClick: true,
+            arrowMarkup: '<button title="%title%" type="button" class="arrow-%dir%"></button>', // markup of an arrow button
+            tPrev: 'Previous (Left arrow key)', // title for left button
+            tNext: 'Next (Right arrow key)', // title for right button
+            tCounter: '<span class="mfp-counter">%curr% of %total%</span>' // markup of counter
+          }
+        }
+      );
 
 			$(".gallery-images.style-title .img .overlay a.video").magnificPopup({
 			 
@@ -1682,7 +1699,10 @@ $(document).ready(function() {
 			    closeOnContentClick: true,
 			    mainClass: 'mfp-fade',
 			    preloader: true,
-
+          image: {
+            titleSrc: 'data-title' 
+            // this tells the script which attribute has your caption
+        	},
 			    gallery: {
 				    enabled: true,
 					navigateByImgClick: true,

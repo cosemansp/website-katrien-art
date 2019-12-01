@@ -1,15 +1,11 @@
 <template>
   <footer>
-    <p class="copyrights">© UNO PHOTOGRAPHY | ALL RIGHTS RESERVED</p>
+    <p class="copyrights">© ART - KATRIEN DANSCHUTTER | ALL RIGHTS RESERVED</p>
 
     <div class="social-networks clearfix">
       <a href="#">
         <span>FACEBOOK</span>
         <i class="facebook-icon icon1-facebook"></i>
-      </a>
-      <a href="#">
-        <span>TWITTER</span>
-        <i class="twitter-icon icon1-twitter"></i>
       </a>
       <a href="#">
         <span>PINTEREST</span>

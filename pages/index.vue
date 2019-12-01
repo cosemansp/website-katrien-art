@@ -1,6 +1,5 @@
 <template>
   <Layout>
-    <!-- Begin Wrapper -->
     <div class="wrapper">
       <!-- Begin Horizontal Gallery -->
       <div class="gallery-h normal">
@@ -11,68 +10,17 @@
 
         <div class="gallery clearfix">
           <div class="container">
-            <div class="img">
-              <a href="images/gallery/g5_1.jpg" rel="gallery">
+            <div class="img" v-for="asset in assets" :key="asset.id">
+              <a
+                :href="asset.url"
+                rel="gallery"
+                :data-title="asset.title + ' - ' + asset.description"
+              >
                 <img
-                  src="images/gallery/g5_1.jpg"
+                  :src="asset.url"
                   alt=""
-                  data-width="840"
-                  data-height="1260"
-                />
-              </a>
-            </div>
-
-            <div class="img">
-              <a href="images/gallery/g5_2.jpg" rel="gallery">
-                <img
-                  src="images/gallery/g5_2.jpg"
-                  alt=""
-                  data-width="840"
-                  data-height="1260"
-                />
-              </a>
-            </div>
-
-            <div class="img">
-              <a href="images/gallery/g5_3.jpg" rel="gallery">
-                <img
-                  src="images/gallery/g5_3.jpg"
-                  alt=""
-                  data-width="2048"
-                  data-height="1367"
-                />
-              </a>
-            </div>
-
-            <div class="img">
-              <a href="images/gallery/g5_4.jpg" rel="gallery">
-                <img
-                  src="images/gallery/g5_4.jpg"
-                  alt=""
-                  data-width="2048"
-                  data-height="1356"
-                />
-              </a>
-            </div>
-
-            <div class="img">
-              <a href="images/gallery/g5_5.jpg" rel="gallery">
-                <img
-                  src="images/gallery/g5_5.jpg"
-                  alt=""
-                  data-width="584"
-                  data-height="1024"
-                />
-              </a>
-            </div>
-
-            <div class="img">
-              <a href="images/gallery/g5_6.jpg" rel="gallery">
-                <img
-                  src="images/gallery/g5_6.jpg"
-                  alt=""
-                  data-width="2048"
-                  data-height="1362"
+                  :data-width="asset.width"
+                  :data-height="asset.height"
                 />
               </a>
             </div>
@@ -81,16 +29,38 @@
       </div>
       <!-- End Horizontal Gallery -->
     </div>
-    <!-- End Wrapper -->
   </Layout>
 </template>
 
 <script>
+import gql from 'graphql-tag'
 import Layout from '../components/layout'
+
+export const assets = gql`
+  query assets {
+    assets {
+      id
+      status
+      height
+      width
+      url
+      title
+      description
+    }
+  }
+`
 
 export default {
   components: {
     Layout
+  },
+  apollo: {
+    assets: {
+      query: assets
+    }
+  },
+  mounted() {
+    console.log('assets', this.assets)
   }
 }
 </script>

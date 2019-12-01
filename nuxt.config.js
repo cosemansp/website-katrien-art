@@ -49,5 +49,11 @@ export default {
   },
   render: {
     ssrLog: 'collapsed'
+  },
+  modules: ['@nuxtjs/apollo'],
+  apollo: {
+    clientConfigs: {
+      default: '~/apollo/client-configs/default.js'
+    }
   }
 }
