@@ -37,7 +37,7 @@
             >
               <div class="img-cont">
                 <img
-                  :src="asset.url"
+                  :src="asset.thumbnailUrl"
                   alt=""
                   :data-width="asset.width"
                   :data-height="asset.height"
@@ -80,6 +80,9 @@ export const assets = gql`
       status
       height
       width
+      thumbnailUrl: url(
+        transformation: { image: { resize: { width: 400, fit: scale } } }
+      )
       url
       title
       description

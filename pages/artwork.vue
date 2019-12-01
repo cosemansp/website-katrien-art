@@ -5,7 +5,7 @@
       <!-- Begin Inner Wrapper -->
       <div class="inner-wrapper">
         <!-- Begin Gallery -->
-        <div class="gallery-images masonry style-title high-space">
+        <div class="gallery-images grid style-title no-space">
           <div class="row">
             <div class="col full">
               <div class="filters clearfix" data-style="scale">
@@ -22,7 +22,7 @@
             </div>
           </div>
 
-          <div class="images clearfix cols-4">
+          <div class="images clearfix cols-8">
             <div
               class="img"
               :class="[
@@ -37,10 +37,10 @@
             >
               <div class="img-cont">
                 <img
-                  :src="asset.url"
+                  :src="asset.thumbnailUrl"
                   alt=""
                   :data-width="asset.width"
-                  :data-height="asset.height"
+                  :data-height="asset.width"
                 />
 
                 <div class="overlay">
@@ -52,8 +52,7 @@
                     rel="gallery"
                     :href="asset.url"
                     :data-title="asset.caption"
-                    ><h5>{{ asset.title }}</h5>
-                    <h6>{{ asset.description }}</h6></a
+                    ><h6>{{ asset.title }}</h6></a
                   >
                 </div>
               </div>
@@ -79,6 +78,11 @@ export const assets = gql`
       status
       height
       width
+      thumbnailUrl: url(
+        transformation: {
+          image: { resize: { height: 470, width: 470, fit: crop } }
+        }
+      )
       url
       title
       description
