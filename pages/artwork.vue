@@ -68,12 +68,15 @@
 </template>
 
 <script>
-import Layout from '../components/layout'
-import gql from 'graphql-tag'
+import Layout from '../components/layout';
+import gql from 'graphql-tag';
 
 export const assets = gql`
   query assets {
-    assets {
+    assets(
+      where: { OR: [{ category: Drawing }, { category: Painting }] }
+      orderBy: sort_DESC
+    ) {
       id
       status
       height
@@ -96,7 +99,7 @@ export const assets = gql`
       }
     }
   }
-`
+`;
 export default {
   components: {
     Layout
@@ -105,18 +108,18 @@ export default {
     return {
       assets: [],
       subcategories: []
-    }
+    };
   },
   methods: {
     getFilter(name) {
-      return `.filter-${name.toLowerCase()}`
+      return `.filter-${name.toLowerCase()}`;
     },
     getFilterClasses(asset) {
       const filter = asset.subcategory.reduce((acc, sub) => {
-        return (acc += ' ' + `filter-${sub.toLowerCase()}`)
-      }, '')
-      console.log('filter', asset, filter)
-      return filter
+        return (acc += ' ' + `filter-${sub.toLowerCase()}`);
+      }, '');
+      console.log('filter', asset, filter);
+      return filter;
     }
   },
   apollo: {
@@ -124,28 +127,28 @@ export default {
       query: assets,
       result({ data, loading, networkStatus }) {
         this.assets = data.assets.map((asset) => {
-          let caption = asset.title || ''
+          let caption = asset.title || '';
           if (asset.description) {
-            caption += ` - ${asset.description}`
+            caption += ` - ${asset.description}`;
           }
           if (asset.dimension) {
-            caption += ` - ${asset.dimension}`
+            caption += ` - ${asset.dimension}`;
           }
           return {
             ...asset,
             caption
-          }
-        })
+          };
+        });
         this.subcategories = data.__type.enumValues.map((sub) => {
           return {
             ...sub,
             caption: sub.name.replace('_', ' ').toUpperCase()
-          }
-        })
+          };
+        });
       }
     }
   }
-}
+};
 </script>
 
 <style>

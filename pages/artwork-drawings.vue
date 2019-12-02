@@ -75,7 +75,7 @@ import gql from 'graphql-tag'
 
 export const assets = gql`
   query assets {
-    assets(where: { category: Drawing }) {
+    assets(where: { category: Drawing }, orderBy: sort_DESC) {
       id
       status
       height
