@@ -25,6 +25,10 @@
               </a>
             </div>
           </div>
+
+          <div class="nav">
+            <a href="#" class="full icon4-fullscreen6"></a>
+          </div>
         </div>
       </div>
       <!-- End Horizontal Gallery -->

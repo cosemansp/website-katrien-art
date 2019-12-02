@@ -1113,6 +1113,13 @@ $(document).ready(function() {
 				event.preventDefault();
 
 				toggleFullScreen(document.body);
+      });
+      
+      // Navigation Controls - Fullscreen
+			$(".gallery .nav .full").click(function(event) {
+				event.preventDefault();
+
+				toggleFullScreen(document.body);
 			});
 		}
 
