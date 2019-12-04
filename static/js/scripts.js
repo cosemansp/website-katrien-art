@@ -1794,7 +1794,7 @@ $(document).ready(function() {
 					});
 
 					$.post(form_action, current_form.serialize(), function(data) {
-            console.log('result form', data);
+            // console.log('result form', data);
 						// if(data == 'success'){
 
 							current_form.find('.message-info').addClass('success').text('Bericht succesvol verzonden.');
@@ -1803,7 +1803,7 @@ $(document).ready(function() {
 								current_form.find('.message-info').removeClass('success');
 							},5000);
 
-							current_form.find("input:not([type=button])").val('');
+							// current_form.find("input:not([type=button])").val('');
 							current_form.find("textarea").val('');
 						// }
 						// else{
