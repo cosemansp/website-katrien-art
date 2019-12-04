@@ -32,11 +32,12 @@
             <div class="row">
               <div class="two-third col">
                 <form
-                  name="vue-tea"
+                  name="contact"
                   method="post"
-                  data-netlify="true"
-                  data-netlify-honeypot="bot-field"
+                  netlify
+                  netlify-honeypot="bot-field"
                 >
+                  <input name="bot-field" />
                   <input type="text" name="user_name" placeholder="NAME" />
                   <input type="email" name="user_email" placeholder="EMAIL" />
                   <input
