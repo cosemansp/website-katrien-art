@@ -31,7 +31,7 @@ $(document).ready(function() {
 						home_landing_animation_speed = 3000;
 
 					$(".landing-slideshow .flexslider").flexslider({
-					  
+
 					    prevText: "",
 					    nextText: "",
 					    animation: 'fade',
@@ -75,7 +75,7 @@ $(document).ready(function() {
 					striped_slides_interval = setInterval(function(){random_slide(cols)},home_landing_s_slideshow_speed);
 
 					$(".striped-slides .flexslider").flexslider({
-					  
+
 					    prevText: "",
 					    nextText: "",
 					    animation: 'fade',
@@ -99,7 +99,7 @@ $(document).ready(function() {
 
 
 					$(".full-screen.flexslider.normal-nav, .full-screen.flexslider.no-nav").flexslider({
-					  
+
 					    prevText: "",
 					    nextText: "",
 					    animation: 'fade',
@@ -120,7 +120,7 @@ $(document).ready(function() {
 
 
 					$(".full-screen.flexslider.vertical-nav, .full-screen.flexslider.horizontal-nav").flexslider({
-					  
+
 					    prevText: "",
 					    nextText: "",
 					    animation: 'fade',
@@ -143,7 +143,7 @@ $(document).ready(function() {
 				if($(".gallery-albums.grid").length > 0) {
 
 					$(".gallery-albums.grid .album-cont img").each(function(index, el) {
-						
+
 						var o_width = $(this).attr('data-width'),
 							o_height = $(this).attr('data-height'),
 							c_width = $(this).width();
@@ -157,7 +157,7 @@ $(document).ready(function() {
 				if($(".gallery-albums.masonry").length > 0) {
 
 					$(".gallery-albums.masonry .album-cont img").each(function(index, el) {
-						
+
 						var o_width = $(this).attr('data-width'),
 							o_height = $(this).attr('data-height'),
 							c_width = $(this).width();
@@ -173,7 +173,7 @@ $(document).ready(function() {
 				if($(".gallery-images.grid").length > 0) {
 
 					$(".gallery-images img").each(function(index, el) {
-						
+
 						var o_width = $(this).attr('data-width'),
 							o_height = $(this).attr('data-height'),
 							c_width = $(this).width();
@@ -187,7 +187,7 @@ $(document).ready(function() {
 				if($(".gallery-images.masonry").length > 0) {
 
 					$(".gallery-images.masonry img").each(function(index, el) {
-						
+
 						var o_width = $(this).attr('data-width'),
 							o_height = $(this).attr('data-height'),
 							c_width = $(this).width();
@@ -201,13 +201,13 @@ $(document).ready(function() {
 			// Horizontal - Normal
 				if($(".gallery-h.normal").length > 0) {
 					$(".gallery-h.normal .container .img a").each(function(index, el) {
-						
+
 						var img = $(this).find('img'),
 						img_h = $(this).parent().height(),
 						img_o_w = img.attr('data-width'),
 						img_o_h = img.attr('data-height'),
 						img_c_w = img_h*img_o_w/img_o_h;
-						
+
 						img.width(img_c_w);
 
 						$(this).width(img_c_w);
@@ -241,7 +241,7 @@ $(document).ready(function() {
 
 
 					$(".gallery-h.centered .container .img a").each(function(index, el) {
-						
+
 						var img = $(this).find('img'),
 							img_h = $(this).parent().height(),
 							img_o_w = img.attr('data-width'),
@@ -300,7 +300,7 @@ $(document).ready(function() {
 					$(".gallery-h.centered .gallery .container").mousewheel(function(event) {
 
 						var direction = (event.deltaY == 1)? 'left' : 'right';
-						
+
 						gallery_scroll(direction);
 						event.preventDefault();
 					});
@@ -315,7 +315,7 @@ $(document).ready(function() {
 					// Navigation - Right Arrow
 					$(".gallery-h.centered .nav .next").click(function(event) {
 						event.preventDefault();
-						
+
 						gallery_scroll('right');
 					});
 				}
@@ -327,7 +327,7 @@ $(document).ready(function() {
 				if($(".portfolio.grid").length > 0) {
 
 					$(".portfolio.grid .project-cont img").each(function(index, el) {
-						
+
 						var o_width = $(this).attr('data-width'),
 							o_height = $(this).attr('data-height'),
 							c_width = $(this).width();
@@ -341,7 +341,7 @@ $(document).ready(function() {
 				if($(".portfolio.masonry").length > 0) {
 
 					$(".portfolio.masonry .project-cont img").each(function(index, el) {
-						
+
 						var o_width = $(this).attr('data-width'),
 							o_height = $(this).attr('data-height'),
 							c_width = $(this).width();
@@ -407,7 +407,7 @@ $(document).ready(function() {
 					if(win_w >= 768) {
 
 						$(".portfolio-single.style-1 .images a").each(function(index, el) {
-							
+
 							var img = $(this).find('img'),
 								img_h = img.height(),
 								img_o_w = img.attr('data-width'),
@@ -432,7 +432,7 @@ $(document).ready(function() {
 			if($(".blog").length > 0) {
 
 				$(".blog .article img").each(function(index, el) {
-					
+
 					var o_width = $(this).attr('data-width'),
 						o_height = $(this).attr('data-height'),
 						c_width = $(this).width();
@@ -474,7 +474,7 @@ $(document).ready(function() {
 			if($(".gallery-albums").length > 0) {
 
 				$(".gallery-albums .album-cont img").each(function(index, el) {
-					
+
 					var o_width = $(this).attr('data-width'),
 						o_height = $(this).attr('data-height'),
 						c_width = $(this).width();
@@ -489,7 +489,7 @@ $(document).ready(function() {
 			if($(".gallery-images.masonry").length > 0) {
 
 				$(".gallery-images.masonry img").each(function(index, el) {
-					
+
 					var o_width = $(this).attr('data-width'),
 						o_height = $(this).attr('data-height'),
 						c_width = $(this).width();
@@ -504,7 +504,7 @@ $(document).ready(function() {
 			if($(".gallery-images.grid").length > 0) {
 
 				$(".gallery-images img").each(function(index, el) {
-					
+
 					var o_width = $(this).attr('data-width'),
 						o_height = $(this).attr('data-height'),
 						c_width = $(this).width();
@@ -521,7 +521,7 @@ $(document).ready(function() {
 				$('.gallery-h .container').width(99999);
 
 				$('.gallery-h .container .img a').each(function(index, el) {
-					
+
 					var anchor = $(this),
 						img = $(this).find('img'),
 						img_w = img.attr('data-width'),
@@ -556,7 +556,7 @@ $(document).ready(function() {
 				$('.gallery-h .container').width(99999);
 
 				$(".gallery-h .container .img a").each(function(index, el) {
-					
+
 					var anchor = $(this),
 						img = $(this).find('img'),
 						img_w = img.attr('data-width'),
@@ -618,7 +618,7 @@ $(document).ready(function() {
 			if($(".portfolio").length > 0) {
 
 				$(".portfolio .project-cont img").each(function(index, el) {
-					
+
 					var o_width = $(this).attr('data-width'),
 						o_height = $(this).attr('data-height'),
 						c_width = $(this).width();
@@ -636,7 +636,7 @@ $(document).ready(function() {
 				$('.portfolio-single.style-1 .content .images').width(99599);
 
 				$('.portfolio-single.style-1 .content .images a').each(function(index, el) {
-					
+
 					var anchor = $(this),
 						img = $(this).find('img'),
 						img_w = img.attr('data-width'),
@@ -655,7 +655,7 @@ $(document).ready(function() {
 
 				$('.portfolio-single.style-1 .content').width(total_width);
 			}
-			
+
 		// Pages
 			if(win_w > 768) {
 				// About Me - Page
@@ -690,12 +690,12 @@ $(document).ready(function() {
 				var wrapper_height = $(".contact-1 .content-wrapper").height();
 				$(".contact-1 .map").height(wrapper_height+60);
 			}
-	
+
 		// Blog
 			if($(".blog").length > 0) {
 
 				$(".blog .article").each(function(index, el) {
-					
+
 					var img = $(this).find('img'),
 						o_width = img.attr('data-width'),
 						o_height = img.attr('data-height'),
@@ -804,7 +804,7 @@ $(document).ready(function() {
 	Handlers
 ============================================================================================================================================
 ============================================================================================================================================*/
-	
+
 // Preloader
 		if($(".contact-1").length <= 0 && $(".contact-2").length <= 0 && $(".loader").length > 0) {
 
@@ -856,14 +856,14 @@ $(document).ready(function() {
 			}
 			else {
 				$("img:not('.lazy')").each(function(index, el) {
-					
+
 					$(this).imagesLoaded(function(){
 						loaded_imgs++;
 
 						if(loaded_imgs == imgs) {
 
 							render();
-					    	
+
 							$(".loader").delay(1500).fadeOut(200, function() {
 					    		$("body").addClass('loaded');
 					    	});
@@ -896,7 +896,7 @@ $(document).ready(function() {
 					fs_animation_speed = 2000;
 
 				$(".inner-wrapper .flexslider").flexslider({
-				  
+
 				    prevText: "",
 				    nextText: "",
 				    animation: 'fade',
@@ -985,10 +985,10 @@ $(document).ready(function() {
 	Header
 ============================================================================================================================================
 ============================================================================================================================================*/
-  
+
 	// Dropdown effect
 		$("header nav li").hover(function() {
-		 
+
 			    if ( $(this).children('ul').length > 0  && !$(".mobile-navigation").is(':visible') ) {
 
 			    	var children = $(this).find('> ul'),
@@ -1003,7 +1003,7 @@ $(document).ready(function() {
 			        $(this).find('> ul').fadeIn(300);
 			    }
 			}, function() {
-		 
+
 			    if ( $(this).children('ul').length > 0 && !$(".mobile-navigation").is(':visible') ) {
 			        $(this).find('> ul').stop().fadeOut(300);
 			    }
@@ -1012,9 +1012,9 @@ $(document).ready(function() {
 
 	// Unfolding sub-menus in responsive mode.
 		$("header nav li a").click(function(event) {
-		 	
+
 		    if ( $(this).parent().children('ul').length > 0  && $(".mobile-navigation").is(':visible') ) {
-		    
+
 		 		event.preventDefault();
 		        $(this).parent().find('> ul').slideToggle(300);
 		    }
@@ -1035,7 +1035,7 @@ $(document).ready(function() {
   // Mobile navigation
 		$(".mobile-navigation").click(function(event) {
 		    event.preventDefault();
-		 
+
 		    $("header nav").slideToggle(100);
 		});
 
@@ -1044,7 +1044,7 @@ $(document).ready(function() {
 		if($("header").length > 0) {
 
 			$("header nav .mCSB_container > ul > li > a").each(function(index, el) {
-				
+
 				if(win_w <= 1024 && $(this).parent().children('ul').length > 0) {
 
 					$(this).append('<span class="arrow-down icon1-chevron-down"></span>');
@@ -1114,7 +1114,7 @@ $(document).ready(function() {
 
 				toggleFullScreen(document.body);
       });
-      
+
       // Navigation Controls - Fullscreen
 			$(".gallery .nav .full").click(function(event) {
 				event.preventDefault();
@@ -1135,7 +1135,7 @@ $(document).ready(function() {
 
 		// Navigation - Bullet click
 		$(".full-screen.flexslider .nav .bullets a").click(function(event) {
-			
+
 			event.preventDefault();
 
 			var id = $(this).index(),
@@ -1172,13 +1172,13 @@ $(document).ready(function() {
 
 			// On Image Click
 			$(".gallery-h.normal .container .img a").magnificPopup({
-			 
+
 			    type: 'image',
 			    closeOnContentClick: true,
 			    mainClass: 'mfp-fade',
 					preloader: true,
 					image: {
-            titleSrc: 'data-title' 
+            titleSrc: 'data-title'
             // this tells the script which attribute has your caption
         	},
 			    gallery: {
@@ -1223,13 +1223,13 @@ $(document).ready(function() {
 		if($(".gallery-h.centered").length > 0) {
 
 			$(".gallery-h.centered .container .img a").magnificPopup({
-			 
+
 			    type: 'image',
 			    closeOnContentClick: true,
 			    mainClass: 'mfp-fade',
           preloader: true,
           image: {
-            titleSrc: 'data-title' 
+            titleSrc: 'data-title'
             // this tells the script which attribute has your caption
         	},
 
@@ -1300,7 +1300,7 @@ $(document).ready(function() {
 			});
 
 			$(".gallery-albums .album").each(function(index, el) {
-				
+
 				var id = $(this).find('.overlay').attr('href'),
 					love = $(this).find('.love');
 
@@ -1314,7 +1314,7 @@ $(document).ready(function() {
 
 			$(".gallery-albums .album .love-2").click(function(event) {
 				event.preventDefault();
-				
+
 				var id = $(this).parent().attr('href'),
 					love = $(this).prev();
 
@@ -1337,7 +1337,7 @@ $(document).ready(function() {
 				gallery_k_animation_speed = 2000;
 
 			$(".full-screen.flexslider.kenburns").flexslider({
-			  
+
 			    prevText: "",
 			    nextText: "",
 			    animation: 'fade',
@@ -1414,7 +1414,7 @@ $(document).ready(function() {
 			});
 
 			$(".gallery-images .img").each(function(index, el) {
-				
+
 				var id = $(this).find('.overlay .preview').attr('href'),
 					love = $(this).find('.love');
 
@@ -1435,7 +1435,7 @@ $(document).ready(function() {
 
 			$(".gallery-images .img .love-2").click(function(event) {
 				event.preventDefault();
-				
+
 				var id = $(this).parent().find('.preview').attr('href'),
 					love = $(this).prev();
 
@@ -1457,13 +1457,13 @@ $(document).ready(function() {
 			});
 
 			$(".gallery-images .img .preview-2, .gallery-images .img .preview-3").magnificPopup({
-			 
+
 			    type: 'image',
 			    closeOnContentClick: true,
 			    mainClass: 'mfp-fade',
           preloader: true,
           image: {
-            titleSrc: 'data-title' 
+            titleSrc: 'data-title'
             // this tells the script which attribute has your caption
         	},
 
@@ -1479,7 +1479,7 @@ $(document).ready(function() {
 
 			// On Image Click
 			$(".gallery-images .img a.img-cont").magnificPopup({
-			 
+
 			    type: 'iframe',
 			    closeOnContentClick: false,
 			    mainClass: 'mfp-fade',
@@ -1488,12 +1488,12 @@ $(document).ready(function() {
 						markup: '<div class="mfp-iframe-scaler">'+
 						        '<div class="mfp-close"></div>'+
 						        '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
-						      '</div>', 
+						      '</div>',
 
 						patterns: {
 							youtube: {
 							  index: 'youtube.com/',
-							  id: 'v=', 
+							  id: 'v=',
 							  src: '//www.youtube.com/embed/%id%?autoplay=1'
 							},
 							vimeo: {
@@ -1511,13 +1511,13 @@ $(document).ready(function() {
 			});
 
 			$(".gallery-images .img .preview").magnificPopup({
-			 
+
 			    type: 'image',
 			    closeOnContentClick: true,
 			    mainClass: 'mfp-fade',
           preloader: true,
           image: {
-            titleSrc: 'data-title' 
+            titleSrc: 'data-title'
             // this tells the script which attribute has your caption
         	},
 
@@ -1533,13 +1533,13 @@ $(document).ready(function() {
       );
 
 			$(".gallery-images.style-title .img .overlay a:not('.video')").magnificPopup({
-			 
+
 			    type: 'image',
 			    closeOnContentClick: true,
 			    mainClass: 'mfp-fade',
           preloader: true,
           image: {
-            titleSrc: 'data-title' 
+            titleSrc: 'data-title'
             // this tells the script which attribute has your caption
         	},
 			    gallery: {
@@ -1554,7 +1554,7 @@ $(document).ready(function() {
       );
 
 			$(".gallery-images.style-title .img .overlay a.video").magnificPopup({
-			 
+
 			    type: 'iframe',
 			    closeOnContentClick: false,
 			    mainClass: 'mfp-fade',
@@ -1563,12 +1563,12 @@ $(document).ready(function() {
 						markup: '<div class="mfp-iframe-scaler">'+
 						        '<div class="mfp-close"></div>'+
 						        '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
-						      '</div>', 
+						      '</div>',
 
 						patterns: {
 							youtube: {
 							  index: 'youtube.com/',
-							  id: 'v=', 
+							  id: 'v=',
 							  src: '//www.youtube.com/embed/%id%?autoplay=1'
 							},
 							vimeo: {
@@ -1595,7 +1595,7 @@ $(document).ready(function() {
 
 	// Filters
 		if($(".portfolio").length > 0) {
-			
+
 			$(".portfolio .filters a").click(function(event) {
 				event.preventDefault();
 
@@ -1633,7 +1633,7 @@ $(document).ready(function() {
 
 	// Striped
 		if($(".portfolio-striped").length > 0) {
-			
+
 			// Navigation - Next
 			$(".portfolio-striped .nav .next").click(function(event) {
 				event.preventDefault();
@@ -1701,13 +1701,13 @@ $(document).ready(function() {
 
 			// On Image Click
 			$(".portfolio-single.style-1 .content .images a").magnificPopup({
-			 
+
 			    type: 'image',
 			    closeOnContentClick: true,
 			    mainClass: 'mfp-fade',
 			    preloader: true,
           image: {
-            titleSrc: 'data-title' 
+            titleSrc: 'data-title'
             // this tells the script which attribute has your caption
         	},
 			    gallery: {
@@ -1767,55 +1767,56 @@ $(document).ready(function() {
 	// Contact Us
 
 		// Form Submit Validation
-			// $(".contact-1 form input[type=button], .contact-2 form input[type=button]").click(function(event) {
-			// 	event.preventDefault();
+			$(".contact-1 form input[type=button], .contact-2 form input[type=button]").click(function(event) {
+				event.preventDefault();
 
-			// 	var current_form = $(this).parent(),
-			// 		form_action  = current_form.attr('action');
+				var current_form = $(this).parent(),
+          form_action  = current_form.attr('action');
 
 
-			// 	if(current_form.find("input[type=text]").val() == "" || current_form.find("input[type=email]").val() == "" || current_form.find("textarea").val() == "" ){
+				if(current_form.find("input[type=text]").val() == "" || current_form.find("input[type=email]").val() == "" || current_form.find("textarea").val() == "" ){
 
-			// 		current_form.find("input, textarea").each(function(index, el) {
-						
-			// 			if ($(this).val() == "") {
-			// 				$(this).addClass('error');
-			// 			}
-			// 			else {
-			// 				$(this).removeClass('error');
-			// 			}
-			// 		});
-			// 	}
-			// 	else{
+					current_form.find("input, textarea").each(function(index, el) {
 
-			// 		current_form.find("input:not([type=button]), textarea").each(function(index, el) {
-						
-			// 			$(this).removeClass('error');
-			// 		});
+						if ($(this).val() == "") {
+							$(this).addClass('error');
+						}
+						else {
+							$(this).removeClass('error');
+						}
+					});
+				}
+				else{
 
-			// 		$.post(form_action, current_form.serialize(), function(data) {
-			// 			if(data == 'success'){
+					current_form.find("input:not([type=button]), textarea").each(function(index, el) {
 
-			// 				current_form.find('.message-info').addClass('success').text('Message sent successfully.');
+						$(this).removeClass('error');
+					});
 
-			// 				setTimeout(function(){
-			// 					current_form.find('.message-info').removeClass('success');
-			// 				},5000);
+					$.post(form_action, current_form.serialize(), function(data) {
+            console.log('result form', data);
+						if(data == 'success'){
 
-			// 				current_form.find("input:not([type=button])").val('');
-			// 				current_form.find("textarea").val('');
-			// 			}
-			// 			else{
-			// 				current_form.find('.message-info').addClass('fail');
-			// 				current_form.find('.message-info').text('Message couldn\'t be sent.');
-			// 				setTimeout(function(){
-			// 					current_form.find('.message-info').removeClass('fail');
-			// 				},5000);
-			// 			}
-			// 		});
-			// 	}
-			// });
-		
+							current_form.find('.message-info').addClass('success').text('Message sent successfully.');
+
+							setTimeout(function(){
+								current_form.find('.message-info').removeClass('success');
+							},5000);
+
+							current_form.find("input:not([type=button])").val('');
+							current_form.find("textarea").val('');
+						}
+						else{
+							current_form.find('.message-info').addClass('fail');
+							current_form.find('.message-info').text('Message couldn\'t be sent.');
+							setTimeout(function(){
+								current_form.find('.message-info').removeClass('fail');
+							},5000);
+						}
+					});
+				}
+			});
+
 		// Contact 1
 
 			// Map Initialization
@@ -1825,17 +1826,17 @@ $(document).ready(function() {
 				// 		add = $(".contact-1 .map").attr('data-address') || 'London, United Kindgom';
 
 				// 	$(".contact-1 .map").append('<div class="map-wrapper" id="map"></div>');
-					
+
 				// 	$(".contact-1 .map-wrapper").width(win_w);
 				// 	$(".contact-1 .map-wrapper").height(height);
 
 				// 	$("#map").gMap({
-					   
+
 				// 	    address: add,
 				// 	    zoom: 12,
 				// 	    scrollwheel: true,
 				// 	    maptype: 'ROADMAP',
-					   
+
 				// 	    controls: {
 				// 	           panControl: false,
 				// 	           zoomControl: true,
@@ -1894,12 +1895,12 @@ $(document).ready(function() {
 				// 	var	add = $(".contact-2 .map").attr('data-address') || 'London, United Kindgom';
 
 				// 	$(".map-content").gMap({
-					   
+
 				// 	    address: add,
 				// 	    zoom: 12,
 				// 	    scrollwheel: true,
 				// 	    maptype: 'ROADMAP',
-					   
+
 				// 	    controls: {
 				// 	           panControl: false,
 				// 	           zoomControl: true,
@@ -1975,9 +1976,9 @@ $(document).ready(function() {
 
 		// Flickr Widget
 			if($(".sidebar").length > 0) {
-					
+
 				$(".sidebar").imagesLoaded(function(){
-					
+
 					// On Image Hover
 					$('.sidebar .widget.flickr li').hover(function() {
 						$(this).addClass('active');
