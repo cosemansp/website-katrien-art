@@ -115,7 +115,7 @@ export default {
       const filter = asset.subcategory.reduce((acc, sub) => {
         return (acc += ' ' + `filter-${sub.toLowerCase()}`)
       }, '')
-      console.log('filter', asset, filter)
+      // console.log('filter', asset, filter)
       return filter
     }
   },

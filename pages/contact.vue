@@ -36,8 +36,9 @@
                   method="post"
                   netlify
                   netlify-honeypot="bot-field"
+                  action="/pages/contact-success"
                 >
-                  <input name="bot-field" />
+                  <input name="bot-field" class="hidden" />
                   <input type="text" name="user_name" placeholder="NAME" />
                   <input type="email" name="user_email" placeholder="EMAIL" />
                   <input
