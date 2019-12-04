@@ -18,17 +18,16 @@
 
                 <div class="content">
                   <div v-html="page.text.html"></div>
-                  <div class="footer clearfix">
+                  <!-- <div class="footer clearfix">
                     <div class="info-box share">
                       <p class="desc">SHARE</p>
                       <p class="info">
                         <a href="#" class="icon1-facebook"></a>
-                        <a href="#" class="icon1-twitter"></a>
                         <a href="#" class="icon3-pinterest"></a>
                         <a href="#" class="icon1-google-plus"></a>
                       </p>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
               <!-- End Article -->

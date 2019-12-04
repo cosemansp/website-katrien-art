@@ -4789,6 +4789,7 @@ footer .social-networks a:hover {
   .portfolio.masonry .projects.cols-5 .project.size-regular,
   .gallery-albums.grid .albums.cols-4 .album,
   .gallery-albums.grid .albums.cols-5 .album,
+  .gallery-albums.grid .albums.cols-8 .album,
   .gallery-albums.masonry .albums.cols-4 .album.size-regular,
   .gallery-albums.masonry .albums.cols-4 .album.size-regular,
   .gallery-images.grid .images.cols-4 .img,
@@ -4987,6 +4988,8 @@ footer .social-networks a:hover {
   .portfolio.masonry .projects.cols-4 .project.size-regular,
   .gallery-albums.grid .albums.cols-4 .album,
   .gallery-albums.grid .albums.cols-5 .album,
+  .gallery-albums.grid .albums.cols-6 .album,
+  .gallery-albums.grid .albums.cols-8 .album,
   .gallery-albums.masonry .albums.cols-4 .album.size-regular,
   .gallery-images.grid .images.cols-4 .img,
   .gallery-images.masonry .images.cols-4 .img.size-regular,
@@ -5145,6 +5148,8 @@ footer .social-networks a:hover {
   .portfolio.masonry .projects.cols-5 .project.size-regular,
   .gallery-albums.grid .albums.cols-5 .album,
   .gallery-albums.grid .albums.cols-4 .album,
+  .gallery-albums.grid .albums.cols-6 .album,
+  .gallery-albums.grid .albums.cols-8 .album,
   .gallery-albums.masonry .albums.cols-4 .album.size-regular,
   .gallery-images.grid .images.cols-4 .img,
   .gallery-images.masonry .images.cols-4 .img.size-regular,
@@ -5166,6 +5171,7 @@ footer .social-networks a:hover {
   .gallery-albums.masonry .albums.cols-3 .album.size-regular,
   .gallery-albums.masonry .albums.cols-3 .album.size-regular,
   .gallery-images.grid .images.cols-3 .img,
+  .gallery-images.grid .images.cols-8 .img,
   .gallery-images.masonry .images.cols-3 .img.size-regular,
   .gallery-images.masonry .images.cols-3 .img.size-regular,
   .blog .articles.cols-2 .article,
@@ -5298,6 +5304,6 @@ footer .social-networks a:hover {
 
   /* other */
   .hidden {
-    display: hidden
+    display: hidden;
   }
 }
