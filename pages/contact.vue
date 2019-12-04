@@ -31,7 +31,7 @@
 
             <div class="row">
               <div class="two-third col">
-                <form method="post" action="includes/contact_form.php">
+                <form method="post" netlify>
                   <input type="text" name="user_name" placeholder="NAME" />
                   <input type="email" name="user_email" placeholder="EMAIL" />
                   <input
@@ -48,34 +48,9 @@
                 </form>
               </div>
               <div class="one-third col">
-                <p>
-                  Vestibulum tellus risus, pretium et facilisis nec, porta in
-                  felis. Nullm fermentum, lorem nec tincidunt tempus, lectus
-                  venenatis nisi, quis ultrices tortor arcu .
-                </p>
-
-                <p>
-                  felis. Nullm tellus risus, pretium fermentum, lorem nec
-                  tincidunt tempus, lectus venenatis nisi, quis.
-                </p>
-
-                <div class="divider clear" style="height:10px;"></div>
-
-                <div class="info-box">
-                  <p class="desc">WORKING HOURS</p>
-                  <p class="info">
-                    MONDAY: 9 AM - 6 PM<br />TUESDAY: 9 AM - 6 PM<br />WEDNESDAY:
-                    9 AM - 8 PM<br />THURSDAY: 9 AM - 8 PM<br />FRIDAY: 10 AM -
-                    10 PM
-                  </p>
-                </div>
+                <div v-html="contacts[0].info.html"></div>
               </div>
             </div>
-          </div>
-
-          <div class="map" data-address="London, United Kingdom">
-            <div class="open"><p>OPEN MAP</p></div>
-            <div class="map-content"></div>
           </div>
         </div>
       </div>
@@ -95,10 +70,8 @@ export const contacts = gql`
       phone
       email
       address
-      info
-      location {
-        latitude
-        longitude
+      info {
+        html
       }
     }
   }
