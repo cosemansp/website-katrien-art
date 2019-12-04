@@ -6,7 +6,7 @@
           <div class="content-inner clearfix">
             <div class="row">
               <div class="col full">
-                <h4>NEEM CONTACT MET ME OP</h4>
+                <h4>{{ contacts[0].title }}</h4>
               </div>
             </div>
 
@@ -80,6 +80,7 @@ export const contacts = gql`
       status
       id
       phone
+      title
       email
       address
       info {
@@ -99,7 +100,7 @@ export default {
     }
   },
   mounted() {
-    console.log('assets', this.contacts);
+    // console.log('assets', this.contacts);
   }
 };
 </script>
