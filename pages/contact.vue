@@ -39,18 +39,18 @@
                   action="/contact"
                 >
                   <input name="bot-field" class="hidden" />
-                  <input type="text" name="user_name" placeholder="NAME" />
+                  <input type="text" name="user_name" placeholder="NAAM" />
                   <input type="email" name="user_email" placeholder="EMAIL" />
                   <input
                     type="text"
                     name="message_subject"
-                    placeholder="SUBJECT"
+                    placeholder="ONDERWERP"
                   />
                   <textarea
                     name="message_content"
-                    placeholder="MESSAGE"
+                    placeholder="BERIGHT"
                   ></textarea>
-                  <input type="button" name="submit" value="SUBMIT" />
+                  <input type="button" name="submit" value="VERSTUUR" />
                   <p class="message-info">Message Info.</p>
                 </form>
               </div>

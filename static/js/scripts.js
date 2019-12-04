@@ -1795,9 +1795,9 @@ $(document).ready(function() {
 
 					$.post(form_action, current_form.serialize(), function(data) {
             console.log('result form', data);
-						if(data == 'success'){
+						// if(data == 'success'){
 
-							current_form.find('.message-info').addClass('success').text('Message sent successfully.');
+							current_form.find('.message-info').addClass('success').text('Bericht succesvol verzonden.');
 
 							setTimeout(function(){
 								current_form.find('.message-info').removeClass('success');
@@ -1805,14 +1805,14 @@ $(document).ready(function() {
 
 							current_form.find("input:not([type=button])").val('');
 							current_form.find("textarea").val('');
-						}
-						else{
-							current_form.find('.message-info').addClass('fail');
-							current_form.find('.message-info').text('Message couldn\'t be sent.');
-							setTimeout(function(){
-								current_form.find('.message-info').removeClass('fail');
-							},5000);
-						}
+						// }
+						// else{
+						// 	current_form.find('.message-info').addClass('fail');
+						// 	current_form.find('.message-info').text('Het bericht kon niet verzonder worden');
+						// 	setTimeout(function(){
+						// 		current_form.find('.message-info').removeClass('fail');
+						// 	},5000);
+						// }
 					});
 				}
 			});
