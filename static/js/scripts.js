@@ -1767,161 +1767,161 @@ $(document).ready(function() {
 	// Contact Us
 
 		// Form Submit Validation
-			$(".contact-1 form input[type=button], .contact-2 form input[type=button]").click(function(event) {
-				event.preventDefault();
+			// $(".contact-1 form input[type=button], .contact-2 form input[type=button]").click(function(event) {
+			// 	event.preventDefault();
 
-				var current_form = $(this).parent(),
-					form_action  = current_form.attr('action');
+			// 	var current_form = $(this).parent(),
+			// 		form_action  = current_form.attr('action');
 
 
-				if(current_form.find("input[type=text]").val() == "" || current_form.find("input[type=email]").val() == "" || current_form.find("textarea").val() == "" ){
+			// 	if(current_form.find("input[type=text]").val() == "" || current_form.find("input[type=email]").val() == "" || current_form.find("textarea").val() == "" ){
 
-					current_form.find("input, textarea").each(function(index, el) {
+			// 		current_form.find("input, textarea").each(function(index, el) {
 						
-						if ($(this).val() == "") {
-							$(this).addClass('error');
-						}
-						else {
-							$(this).removeClass('error');
-						}
-					});
-				}
-				else{
+			// 			if ($(this).val() == "") {
+			// 				$(this).addClass('error');
+			// 			}
+			// 			else {
+			// 				$(this).removeClass('error');
+			// 			}
+			// 		});
+			// 	}
+			// 	else{
 
-					current_form.find("input:not([type=button]), textarea").each(function(index, el) {
+			// 		current_form.find("input:not([type=button]), textarea").each(function(index, el) {
 						
-						$(this).removeClass('error');
-					});
+			// 			$(this).removeClass('error');
+			// 		});
 
-					$.post(form_action, current_form.serialize(), function(data) {
-						if(data == 'success'){
+			// 		$.post(form_action, current_form.serialize(), function(data) {
+			// 			if(data == 'success'){
 
-							current_form.find('.message-info').addClass('success').text('Message sent successfully.');
+			// 				current_form.find('.message-info').addClass('success').text('Message sent successfully.');
 
-							setTimeout(function(){
-								current_form.find('.message-info').removeClass('success');
-							},5000);
+			// 				setTimeout(function(){
+			// 					current_form.find('.message-info').removeClass('success');
+			// 				},5000);
 
-							current_form.find("input:not([type=button])").val('');
-							current_form.find("textarea").val('');
-						}
-						else{
-							current_form.find('.message-info').addClass('fail');
-							current_form.find('.message-info').text('Message couldn\'t be sent.');
-							setTimeout(function(){
-								current_form.find('.message-info').removeClass('fail');
-							},5000);
-						}
-					});
-				}
-			});
+			// 				current_form.find("input:not([type=button])").val('');
+			// 				current_form.find("textarea").val('');
+			// 			}
+			// 			else{
+			// 				current_form.find('.message-info').addClass('fail');
+			// 				current_form.find('.message-info').text('Message couldn\'t be sent.');
+			// 				setTimeout(function(){
+			// 					current_form.find('.message-info').removeClass('fail');
+			// 				},5000);
+			// 			}
+			// 		});
+			// 	}
+			// });
 		
 		// Contact 1
 
 			// Map Initialization
-				if($(".contact-1 .map").length > 0) {
+				// if($(".contact-1 .map").length > 0) {
 
-					var height = (win_w < 768)? ($(".contact-1 .content-wrapper").height()+60) : win_h,
-						add = $(".contact-1 .map").attr('data-address') || 'London, United Kindgom';
+				// 	var height = (win_w < 768)? ($(".contact-1 .content-wrapper").height()+60) : win_h,
+				// 		add = $(".contact-1 .map").attr('data-address') || 'London, United Kindgom';
 
-					$(".contact-1 .map").append('<div class="map-wrapper" id="map"></div>');
+				// 	$(".contact-1 .map").append('<div class="map-wrapper" id="map"></div>');
 					
-					$(".contact-1 .map-wrapper").width(win_w);
-					$(".contact-1 .map-wrapper").height(height);
+				// 	$(".contact-1 .map-wrapper").width(win_w);
+				// 	$(".contact-1 .map-wrapper").height(height);
 
-					$("#map").gMap({
+				// 	$("#map").gMap({
 					   
-					    address: add,
-					    zoom: 12,
-					    scrollwheel: true,
-					    maptype: 'ROADMAP',
+				// 	    address: add,
+				// 	    zoom: 12,
+				// 	    scrollwheel: true,
+				// 	    maptype: 'ROADMAP',
 					   
-					    controls: {
-					           panControl: false,
-					           zoomControl: true,
-					           mapTypeControl: false,
-					           scaleControl: false,
-					           streetViewControl: false,
-					           overviewMapControl: false
-					    },
-					    markers: [
-					        {
-					            address: add
-					        }
-					    ]
-					});
-				}
+				// 	    controls: {
+				// 	           panControl: false,
+				// 	           zoomControl: true,
+				// 	           mapTypeControl: false,
+				// 	           scaleControl: false,
+				// 	           streetViewControl: false,
+				// 	           overviewMapControl: false
+				// 	    },
+				// 	    markers: [
+				// 	        {
+				// 	            address: add
+				// 	        }
+				// 	    ]
+				// 	});
+				// }
 
-			// Scrollbar
-				if($(".contact-1").length > 0){
+			// // Scrollbar
+			// 	if($(".contact-1").length > 0){
 
-					if(win_w <= 1400) {
+			// 		if(win_w <= 1400) {
 
-						$(".contact-1").niceScroll({
-							mousescrollstep: 60,
-							cursorcolor: "#959595",
-					        cursorborder: "0px solid #fff",
-						});
-						var wrapper_height = $(".contact-1 .content-wrapper").height();
-						$(".contact-1 .mCSB_inside > .mCSB_container").height(wrapper_height+60);
-					}
-				}
+			// 			$(".contact-1").niceScroll({
+			// 				mousescrollstep: 60,
+			// 				cursorcolor: "#959595",
+			// 		        cursorborder: "0px solid #fff",
+			// 			});
+			// 			var wrapper_height = $(".contact-1 .content-wrapper").height();
+			// 			$(".contact-1 .mCSB_inside > .mCSB_container").height(wrapper_height+60);
+			// 		}
+			// 	}
 
-			// Form Close button
-				$(".contact-1 .close").click(function(event) {
-					event.preventDefault();
+			// // Form Close button
+			// 	$(".contact-1 .close").click(function(event) {
+			// 		event.preventDefault();
 
-					$(".contact-1 .content-wrapper").fadeOut(300, function() {
-						$(".contact-1 .form-btn").delay(200).fadeIn(300);
-						$(".contact-1 .map").addClass('active');
-					});
-				});
+			// 		$(".contact-1 .content-wrapper").fadeOut(300, function() {
+			// 			$(".contact-1 .form-btn").delay(200).fadeIn(300);
+			// 			$(".contact-1 .map").addClass('active');
+			// 		});
+			// 	});
 
-			// Form Open Button
-				$(".contact-1 .form-btn").click(function(event) {
-					event.preventDefault();
+			// // Form Open Button
+			// 	$(".contact-1 .form-btn").click(function(event) {
+			// 		event.preventDefault();
 
-					$(this).fadeOut(300);
-					$(".contact-1 .map").removeClass('active');
-					$(".contact-1 .content-wrapper").fadeIn(300);
-				});
+			// 		$(this).fadeOut(300);
+			// 		$(".contact-1 .map").removeClass('active');
+			// 		$(".contact-1 .content-wrapper").fadeIn(300);
+			// 	});
 
 		// Contact 2
 
 			// Map Initialization
-				if($(".contact-2 .map").length > 0) {
+				// if($(".contact-2 .map").length > 0) {
 
-					var	add = $(".contact-2 .map").attr('data-address') || 'London, United Kindgom';
+				// 	var	add = $(".contact-2 .map").attr('data-address') || 'London, United Kindgom';
 
-					$(".map-content").gMap({
+				// 	$(".map-content").gMap({
 					   
-					    address: add,
-					    zoom: 12,
-					    scrollwheel: true,
-					    maptype: 'ROADMAP',
+				// 	    address: add,
+				// 	    zoom: 12,
+				// 	    scrollwheel: true,
+				// 	    maptype: 'ROADMAP',
 					   
-					    controls: {
-					           panControl: false,
-					           zoomControl: true,
-					           mapTypeControl: false,
-					           scaleControl: false,
-					           streetViewControl: false,
-					           overviewMapControl: false
-					    },
-					    markers: [
-					        {
-					            address: add
-					        }
-					    ]
-					});
-				}
+				// 	    controls: {
+				// 	           panControl: false,
+				// 	           zoomControl: true,
+				// 	           mapTypeControl: false,
+				// 	           scaleControl: false,
+				// 	           streetViewControl: false,
+				// 	           overviewMapControl: false
+				// 	    },
+				// 	    markers: [
+				// 	        {
+				// 	            address: add
+				// 	        }
+				// 	    ]
+				// 	});
+				// }
 
 			// Map Open
-				$(".contact-2 .map .open").click(function(event) {
-					event.preventDefault();
+				// $(".contact-2 .map .open").click(function(event) {
+				// 	event.preventDefault();
 
-					$(this).fadeOut(300);
-				});
+				// 	$(this).fadeOut(300);
+				// });
 
 
 /*==========================================================================================================================================
