@@ -24,7 +24,7 @@
           </ul>
         </li>
         <li>
-          <a href="/about">ABOUT</a>
+          <a href="/pages/about">ABOUT</a>
         </li>
         <li>
           <a href="/contact">CONTACT</a>
@@ -37,5 +37,5 @@
 </template>
 
 <script>
-export default {}
+export default {};
 </script>

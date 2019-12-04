@@ -47,6 +47,11 @@ export default {
       { type: "text/javascript", src: "/js/scripts.js", body: true }
     ]
   },
+  generate: {
+    minify: {
+        removeRedundantAttributes: false
+    }
+  },
   render: {
     ssrLog: 'collapsed'
   },
