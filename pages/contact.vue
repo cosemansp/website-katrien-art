@@ -6,7 +6,7 @@
           <div class="content-inner clearfix">
             <div class="row">
               <div class="col full">
-                <h4>CONTACT ME</h4>
+                <h4>NEEM CONTACT MET ME OP</h4>
               </div>
             </div>
 
@@ -14,11 +14,11 @@
 
             <div class="row">
               <div class="info-box col one-third">
-                <p class="desc">PHONE</p>
+                <p class="desc">TELEFOON</p>
                 <p class="info">{{ contacts[0].phone }}</p>
               </div>
               <div class="info-box col one-third">
-                <p class="desc">ADDRESS</p>
+                <p class="desc">ADRES</p>
                 <p class="info">{{ contacts[0].address }}</p>
               </div>
               <div class="info-box col one-third">
@@ -38,7 +38,12 @@
                   netlify-honeypot="bot-field"
                   action="/contact"
                 >
-                  <input name="bot-field" class="hidden" />
+                  <div hidden aria-hidden="true">
+                    <label>
+                      Don’t fill this out if you're human:
+                      <input name="bot-field" />
+                    </label>
+                  </div>
                   <input type="text" name="user_name" placeholder="NAAM" />
                   <input type="email" name="user_email" placeholder="EMAIL" />
                   <input

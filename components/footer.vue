@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p class="copyrights">© ART - KATRIEN DANSCHUTTER | ALL RIGHTS RESERVED</p>
+    <p class="copyrights">© KATRIEN DANSCHUTTER | ALLE RECHTEN VOORBEHOUDEN</p>
 
     <div class="social-networks clearfix">
       <a href="https://www.facebook.com/katrien.danschutter" target="blank">
@@ -23,5 +23,5 @@
 </template>
 
 <script>
-export default {}
+export default {};
 </script>

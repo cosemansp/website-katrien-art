@@ -1,7 +1,7 @@
 <template>
   <header>
     <a href="/" class="logo-container">
-      <p>ART - KATRIEN DANSCHUTTER</p>
+      <p>KATRIEN DANSCHUTTER</p>
     </a>
 
     <nav>
@@ -13,18 +13,18 @@
           <a href="#">PORTFOLIO</a>
           <ul>
             <li>
-              <a href="/artwork">ALL</a>
+              <a href="/artwork">ALLE WERKEN</a>
             </li>
             <li>
-              <a href="/artwork-paintings">PAINTINGS</a>
+              <a href="/artwork-paintings">SCHILDERIJEN</a>
             </li>
             <li>
-              <a href="/artwork-drawings">DRAWINGS</a>
+              <a href="/artwork-drawings">TEKENINGEN</a>
             </li>
           </ul>
         </li>
         <li>
-          <a href="/pages/about">ABOUT</a>
+          <a href="/pages/about">OVER</a>
         </li>
         <li>
           <a href="/contact">CONTACT</a>
