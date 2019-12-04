@@ -48,8 +48,16 @@ export default {
     ]
   },
   generate: {
-    minify: {
-        removeRedundantAttributes: false
+    routes: [
+      '/pages/about',
+    ],
+  },
+  build: {
+    html: {
+      minify: {
+        removeEmptyAttributes: false,
+        removeRedundantAttributes: false,
+      }
     }
   },
   render: {
